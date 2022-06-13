@@ -1,0 +1,24 @@
+@use '@/assets/style/config/vars.scss';
+
+.cc-header {
+  margin: 75px 0 0;
+  color: vars.$color-text;
+}
+
+.cc-header__container {
+  padding: 75px 50px;
+  background-color: vars.$color-base;
+}
+
+.cc-header__title {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.cc-header__subtitle {
+  text-align: center;
+}
+
+.cc-header__header {
+  margin: 0 0 40px;
+}
