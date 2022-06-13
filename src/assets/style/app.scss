@@ -1,0 +1,17 @@
+@use './config/typography.scss';
+@use './config/vars.scss';
+
+// libs
+@import 'reset-css';
+
+@import './config/medias';
+@import './config/structure';
+
+body {
+  // bla
+  background-color: vars.$black;
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  color: vars.$white;
+  @include typography.mt();
+}
