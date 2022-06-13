@@ -36,10 +36,7 @@
         ]
       }
     ],
-    "linebreak-style": [
-      2,
-      "unix"
-    ],
+    "linebreak-style": "off",
     "quotes": [
       2,
       "single"
@@ -55,6 +52,7 @@
     "vue/html-self-closing": "off",
     "vue/component-definition-name-casing": [
       "error", "kebab-case"
-    ]
+    ],
+    "import/no-unresolved": "off"
   }
 }
