@@ -1,11 +1,11 @@
 <template>
   <div class="cc-wrapper">
-    <CcHeader />
+    <CcIntroHeader />
   </div>
 </template>
 
 <script setup>
-import CcHeader from './components/header/header.vue';
+import CcIntroHeader from './components/intro-header/intro-header.vue';
 </script>
 
 <style lang="scss">
