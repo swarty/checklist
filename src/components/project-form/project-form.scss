@@ -1,0 +1,15 @@
+.cc-project-form {
+  &__form-row {
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__form-label {
+    max-width: 300px;
+    width: 100%;
+  }
+  &__form-input {
+    width: 100%;
+  }
+}

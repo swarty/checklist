@@ -1,3 +1,4 @@
+// colors
 $white: #fff;
 $black: #000;
 $light-white: #EBEFE2;
@@ -5,4 +6,10 @@ $light-white: #EBEFE2;
 $color-pure: $light-white;
 $color-base: #2D2A2D;
 $color-accent: #D87030;
-$color-text: $light-white;
+
+// opacity
+$opacity-100: 0.1;
+$opacity-500: 0.5;
+
+// transition
+$transition-150: 0.15s;

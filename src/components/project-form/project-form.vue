@@ -2,13 +2,13 @@
   <div class="cc-project-form">
     <form
       class="cc-project-form__form cc-form"
-      @submit.prevent="onSubmit"
+      @submit.prevent
     >
       <div class="cc-project-form__form-row">
-        <label class="cc-form__label">
+        <label class="cc-form__label cc-project-form__form-label">
           <input
             type="text"
-            class="cc-form__input"
+            class="cc-form__input cc-project-form__form-input"
             v-model="projectName"
             :placeholder="translationMap.component.projectForm.projectName.placeholder"
           >
@@ -16,30 +16,25 @@
       </div>
 
        <div class="cc-project-form__form-row">
-        <label class="cc-form__label">
+        <label class="cc-form__label cc-project-form__form-label">
           <input
             type="text"
-            class="cc-form__input"
+            class="cc-form__input cc-project-form__form-input"
             v-model="projectLink"
-            placeholder="Project LOT|Design|Website link"
+            :placeholder="translationMap.component.projectForm.projectLink.placeholder"
           >
         </label>
       </div>
 
       <div class="cc-project-form__form-row">
-        <label class="cc-form__label">
+        <label class="cc-form__label cc-project-form__form-label">
           <input
             type="text"
-            class="cc-form__input"
+            class="cc-form__input cc-project-form__form-input"
             v-model="employeeName"
-            placeholder=""
+            :placeholder="translationMap.component.projectForm.employeeName.placeholder"
           >
         </label>
-      </div>
-      <div class="cc-project-form__form-row">
-        <button type="submit">
-          submit form
-        </button>
       </div>
     </form>
   </div>
@@ -58,12 +53,14 @@ export default defineComponent({
 </script>
 
 <script setup lang="ts">
+// eslint-disable-next-line
 const translationMap = inject('$t') as any;
 const projectName = ref('');
 const projectLink = ref('');
 const employeeName = ref('');
-
-function onSubmit() {
-  console.log('on submit');
-}
 </script>
+
+<style lang="scss" scoped>
+  @import '@/assets/style/components/form.scss';
+  @import './project-form.scss';
+</style>

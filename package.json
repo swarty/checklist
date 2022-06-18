@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
     "preview": "vite preview"
   },
   "dependencies": {
+    "pinia": "^2.0.14",
     "vue": "^3.2.25"
   },
   "devDependencies": {

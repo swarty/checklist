@@ -1,0 +1,14 @@
+@use '@/assets/style/config/vars.scss';
+
+.cc-task-container {
+  background-color: vars.$light-white;
+  padding: 40px 50px;
+  position: relative;
+  &__filter {
+    padding-top: 40px;
+    border-top: 1px solid vars.$color-base;
+  }
+  &__list {
+    padding-top: 40px;
+  }
+}

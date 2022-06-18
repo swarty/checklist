@@ -6,8 +6,15 @@
 @import './config/medias';
 // @import './config/structure';
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
 body {
   @include typography.mt();
-  color: vars.$white;
-  background-color: vars.$color-pure;
+  color: vars.$color-base;
+  background-color: vars.$color-base;
 }

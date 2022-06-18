@@ -1,0 +1,122 @@
+[
+  {
+    "group": "head",
+    "priority": 1,
+    "title": {
+      "prefix": "Doctype",
+      "description": "The Doctype is HTML5 and is at the top of all your HTML pages."
+    },
+    "tags": [
+      "meta-tag"
+    ],
+    "addition-data": [
+      {
+        "title": "Determining the character encoding - HTML5 W3C",
+        "link": "https://html.spec.whatwg.org/multipage/syntax.html#determining-the-character-encoding"
+      }
+    ]
+  },
+  {
+    "group": "head",
+    "priority": 1,
+    "title": {
+      "prefix": "Charset",
+      "description": "The charset declared (UTF-8) is declared correctly."
+    },
+    "tags": [
+      "meta-tag"
+    ]
+  },
+  {
+    "group": "head",
+    "priority": 1,
+    "title": {
+      "prefix": "Viewport",
+      "description": "The viewport is declared correctly."
+    },
+    "tags": [
+      "meta-tag"
+    ]
+  },
+  {
+    "group": "head",
+    "priority": 2,
+    "title": {
+      "prefix": "Title",
+      "description": "A title is used on all pages"
+    },
+    "tags": [
+      "meta-tag"
+    ],
+    "addition-data": [
+      {
+        "title": "Title - HTML - MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title?ref=frontendchecklist"
+      }
+    ]
+  },
+  {
+    "group": "head",
+    "priority": 3,
+    "title": {
+      "prefix": "Description",
+      "description": "A meta description is provided, it is unique and doesn't possess more than 150 characters."
+    },
+    "tags": [
+      "meta-tag"
+    ],
+    "addition-data": [
+      {
+        "title": "Meta Description - HTML - MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description?ref=frontendchecklist"
+      }
+    ]
+  },
+  {
+    "group": "html",
+    "priority": 1,
+    "title": {
+      "prefix": "HTML5 Semantic Elements",
+      "description": "HTML5 Semantic Elements are used appropriately (header, section, footer, main...)."
+    },
+    "tags": [
+      "html",
+      "best practices"
+    ],
+    "addition-data": [
+      {
+        "title": "HTML Reference",
+        "link": "https://htmlreference.io/?ref=frontendchecklist"
+      }
+    ]
+  },
+  {
+    "group": "web fonts",
+    "priority": 2,
+    "title": {
+      "prefix": "Webfont format",
+      "description": "WOFF, WOFF2 and TTF are supported by all modern browsers."
+    },
+    "tags": [
+      "webfont"
+    ],
+    "addition-data": [
+      {
+        "title": "WOFF - Web Open Font Format - Caniuse",
+        "link": "https://caniuse.com/#feat=woff?ref=frontendchecklist"
+      },
+      {
+        "title": "WOFF 2.0 - Web Open Font Format - Caniuse",
+        "link": "https://caniuse.com/woff2"
+      },
+      {
+        "title": "TTF/OTF - TrueType and OpenType font support",
+        "link": "https://caniuse.com/ttf"
+      },
+      {
+        "title": "Using @font-face - CSS-Tricks",
+        "link": "https://css-tricks.com/snippets/css/using-font-face/?ref=frontendchecklist"
+      }
+    ]
+  }
+]

@@ -7,6 +7,9 @@ export default {
       projectLink: {
         placeholder: 'Project LOT|Design|Website link',
       },
+      employeeName: {
+        placeholder: 'Employee name',
+      },
     },
   },
 };
