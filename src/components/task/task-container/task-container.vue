@@ -1,14 +1,17 @@
 <template>
   <div class="cc-task-container">
     <CcTaskFilter class="cc-task-container__filter" />
-    <CcTaskList class="cc-task-container__list" />
+    <CcTaskList
+      class="cc-task-container__list"
+      :grouped-task-list="store.getGroupedTaskList"
+    />
   </div>
 </template>
 
 <script lang="ts">
+import useMainStore from '@/store/store';
 import CcTaskFilter from '@/components/task/task-filter/task-filter.vue';
 import CcTaskList from '@/components/task/task-list/task-list.vue';
-import useMainStore from '@/store/store';
 
 export default {
   name: 'cc-task-container',
@@ -21,7 +24,7 @@ export default {
 
 <script setup lang="ts">
 const store = useMainStore();
-await store.getTeaskList();
+await store.getTaskList();
 </script>
 
 <style lang="scss" scoped>

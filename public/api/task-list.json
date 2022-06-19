@@ -9,7 +9,7 @@
     "tags": [
       "meta-tag"
     ],
-    "addition-data": [
+    "additionData": [
       {
         "title": "Determining the character encoding - HTML5 W3C",
         "link": "https://html.spec.whatwg.org/multipage/syntax.html#determining-the-character-encoding"
@@ -48,7 +48,7 @@
     "tags": [
       "meta-tag"
     ],
-    "addition-data": [
+    "additionData": [
       {
         "title": "Title - HTML - MDN",
         "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title?ref=frontendchecklist"
@@ -65,7 +65,7 @@
     "tags": [
       "meta-tag"
     ],
-    "addition-data": [
+    "additionData": [
       {
         "title": "Meta Description - HTML - MDN",
         "link": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description?ref=frontendchecklist"
@@ -83,7 +83,7 @@
       "html",
       "best practices"
     ],
-    "addition-data": [
+    "additionData": [
       {
         "title": "HTML Reference",
         "link": "https://htmlreference.io/?ref=frontendchecklist"
@@ -100,7 +100,7 @@
     "tags": [
       "webfont"
     ],
-    "addition-data": [
+    "additionData": [
       {
         "title": "WOFF - Web Open Font Format - Caniuse",
         "link": "https://caniuse.com/#feat=woff?ref=frontendchecklist"

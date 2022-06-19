@@ -2,7 +2,9 @@
   <div class="cc-wrapper">
     <div class="cc-container">
       <CcIntroHeader />
-      <CcTaskContainer />
+      <Suspense>
+        <CcTaskContainer />
+      </Suspense>
     </div>
   </div>
 </template>

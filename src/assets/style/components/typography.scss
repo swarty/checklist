@@ -1,15 +1,19 @@
 @use '../config/vars.scss';
+@use '../config/typography.scss';
 
-.cc-header-1 {
+.cc-title-1 {
   font-size: 32px;
+  @include typography.msb();
 }
 
-.cc-header-2 {
-  font-style: 26px;
+.cc-title-2 {
+  font-size: 26px;
+  @include typography.msb();
 }
 
-.cc-header-3 {
+.cc-title-3 {
   font-size: 24px;
+  @include typography.msb();
 }
 
 .cc-text {

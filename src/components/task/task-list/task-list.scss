@@ -1,1 +1,23 @@
-.cc-task-list {}
+.cc-task-list {
+  &__section {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__section-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  &__section-header-title {
+    margin-right: 10px;
+  }
+  &__section-list-item {
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

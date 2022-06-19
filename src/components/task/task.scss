@@ -1,0 +1,13 @@
+@use '@/assets/style/config/typography.scss';
+
+.cc-task {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__header-title-prefix {
+    margin-right: 5px;
+    @include typography.msb();
+  }
+}
