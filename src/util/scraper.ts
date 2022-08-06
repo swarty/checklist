@@ -1,5 +1,6 @@
 // util function to help get data from vebsite to avoid fingerprinting
-interface ITaskAdditionData {
+/* eslint-disable */
+export interface ITaskAdditionData {
   title: string
   link: string
 }
@@ -17,7 +18,6 @@ interface ITask {
   additionData?: ITaskAdditionData[]
 }
 
-/* eslint-disable */
 enum EPriority {
   HIGH = 'high',
   MEDIUM = 'medium',
