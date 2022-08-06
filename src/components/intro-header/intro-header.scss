@@ -1,23 +1,87 @@
 @use '@/assets/style/config/vars.scss';
+@use '@/assets/style/config/media.scss';
 
 .cc-intro-header {
-  margin: 75px 0 0;
+  &__container {
+    padding: 40px 50px 40px;
+    background-color: vars.$color-pure;
+    @include media.media(phone, tablet) {
+      padding: 20px;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin: 0 0 20px;
+    @include media.media(phone, tablet) {
+      margin: 0 0 10px;
+    }
+  }
+  &_subtitle {
+    text-align: center;
+  }
+  &__header {
+    margin: 0 0 40px;
+    @include media.media(phone, tablet) {
+      margin-bottom: 20px;
+    }
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    @include media.media(phone) {
+      grid-template-columns: 1fr;
+    }
+    @include media.print() {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  &__priority-report-title {
+    margin-bottom: 5px;
+  }
+  &__priority-report-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 2px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__priority-report-list-item-dot {
+    display: block;
+    margin-right: 10px;
+    @include media.print() {
+      display: none;
+    }
+  }
+  &__priority-report-list-item-type {
+    margin-left: 10px;
+  }
+  &__navigation {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: -10px;
+    margin-right: -10px;
+    @include media.print() {
+      display: none;
+    }
+  }
+  &__navigation-item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: vars.$color-base;
+  }
+  &__navigation-print-button {
+    border: 1px solid vars.$black;
+    background-color: transparent;
+    padding: 6px 10px;
+    cursor: pointer;
+    @include media.print() {
+      display: none;
+    }
+  }
 }
 
-.cc-intro-header__container {
-  padding: 40px 50px 40px;
-  background-color: vars.$color-pure;
-}
-
-.cc-intro-header__title {
-  text-align: center;
-  margin: 0 0 20px;
-}
-
-.cc-intro-header__subtitle {
-  text-align: center;
-}
-
-.cc-intro-header__header {
-  margin: 0 0 40px;
-}

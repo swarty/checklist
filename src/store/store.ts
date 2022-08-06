@@ -8,14 +8,27 @@ import {
 export default defineStore('useMainStore', {
   state: () => ({
     taskList: [] as ITask[],
+    activeTaskListTag: '',
   }),
   actions: {
+    enableTaskCompletedStatus(id: string) {
+      const findedTask = this.taskList.find((task) => task.id === id)!;
+      findedTask.completed = true;
+    },
+    disableTaskCompletedStatus(id: string) {
+      const findedTask = this.taskList.find((task) => task.id === id)!;
+      findedTask.completed = false;
+    },
     toggleTaskCompletedStatus(id: string) {
       const findedTask = this.taskList.find((task) => task.id === id)!;
       findedTask.completed = !findedTask.completed;
     },
+    setActiveTaskListTag(tag: string) {
+      this.activeTaskListTag = tag;
+    },
     async getTaskList() {
-      const taskList = await fetch('/api/task-list.json').then((response) => response.json());
+      const response = await fetch('/api/task-list.json');
+      const taskList = await response.json();
       this.taskList = taskList.map((task: ITaskPayload) => ({
         ...task,
         id: window.crypto.randomUUID(),
@@ -35,6 +48,15 @@ export default defineStore('useMainStore', {
         }
         return accum;
       }, {} as IGroupedTaskList);
+    },
+    getTagList(): string[] {
+      return Array.from(
+        new Set(
+          this.taskList
+            .map((task: ITask) => task.tags)
+            .flat(),
+        ),
+      );
     },
   },
 });

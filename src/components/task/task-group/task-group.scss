@@ -1,0 +1,108 @@
+@use '@/assets/style/config/vars.scss';
+@use '@/assets/style/config/media.scss';
+
+.cc-task-group {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    @include media.media(phone) {
+      flex-wrap: wrap;
+    }
+    @include media.print() {
+      border-bottom: 1px solid rgba(vars.$color-base, vars.$opacity-300);
+      margin-bottom: 15px;
+    }
+  }
+  &__header-title {
+    margin-right: 40px;
+    text-transform: uppercase;
+    @include media.media(phone, tablet) {
+      margin: 0 10px 10px;
+    }
+  }
+  &__header-progress {
+    margin-right: 20px;
+    @include media.media(phone, tablet) {
+      margin: 0 10px 10px;
+    }
+  }
+  &__header-navigation {
+    margin-left: auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    @include media.media(phone, tablet) {
+      margin: 0 10px 10px;
+    }
+    @include media.print() {
+      display: none;
+    }
+  }
+  &__header-navigation-item {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(vars.$color-base, vars.$opacity-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: border-color vars.$transition-150;
+    img {
+      width: 18px;
+      height: 18px;
+    }
+    &:active,
+    &_active {
+      border-color: rgba(vars.$color-base, vars.$opacity-800);
+    }
+    @include media.print() {
+      border: 0;
+    }
+  }
+  &__list {
+    @include media.print() {
+      display: block!important;
+    }
+  }
+  &__list-item {
+    border-top: 1px solid rgba(vars.$color-base, vars.$opacity-500);
+    @include media.print() {
+      border: 0;
+    }
+  }
+  &__header-progress {
+    display: flex;
+    flex-direction: column;
+  }
+  &__header-progress-note {
+    width: 200px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    @include media.media(phone, tablet) {
+      width: auto;
+    }
+  }
+  &__header-progress-note-group {
+    text-transform: uppercase;
+  }
+  &__header-progress-tag {
+    width: 120px;
+    height: 20px;
+    border-radius: 2px;
+    display: block;
+    box-shadow: 0 2px 3px rgba(vars.$black, vars.$opacity-500) inset;
+    &[value]::-webkit-progress-bar {
+      background-color: rgba(vars.$color-base, 0.05);
+    }
+    &::-webkit-progress-value {
+      background-color: vars.$color-low-priority;
+    }
+    @include media.print() {
+      display: none;
+    }
+  }
+}

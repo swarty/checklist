@@ -7,9 +7,18 @@ $color-pure: $light-white;
 $color-base: #2D2A2D;
 $color-accent: #D87030;
 
+// priority colors
+$color-hight-priority: #EC0000;
+$color-medium-priority: #EDBA0F;
+$color-low-priority: #27D566;
+
 // opacity
 $opacity-100: 0.1;
+$opacity-300: 0.3;
 $opacity-500: 0.5;
+$opacity-700: 0.7;
+$opacity-800: 0.8;
+$opacity-900: 0.9;
 
 // transition
 $transition-150: 0.15s;

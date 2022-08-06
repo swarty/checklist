@@ -51,9 +51,8 @@ $screen-type: (
   }
 }
 
-@mixin r($screen) {
-	@media all and (max-width: $screen+'px') {
-		@content;
-	}
+@mixin print() {
+	@media print {
+    @content
+  }
 }
-  

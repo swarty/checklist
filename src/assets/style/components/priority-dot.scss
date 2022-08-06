@@ -1,0 +1,33 @@
+@use '@/assets/style/config/vars.scss';
+
+.cc-priority-dot {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  &::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  &_hight {
+    &::after {
+      background-color: vars.$color-hight-priority;;
+    }
+  }
+  &_medium {
+    &::after {
+      background-color: vars.$color-medium-priority;;
+    }
+  }
+  &_low {
+    &::after {
+      background-color: vars.$color-low-priority;;
+    }
+  }
+}

@@ -5,8 +5,16 @@
 @include font-face.font-face('Montserrat-Medium', '@/assets/font/');
 @include font-face.font-face('Montserrat-SemiBold', '@/assets/font/');
 
-@mixin mt {
+@mixin ml {
+  font-family: 'Montserrat-Thin', sans-serif;
+}
+
+@mixin mr {
   font-family: 'Montserrat-Regular', sans-serif;
+}
+
+@mixin mm {
+  font-family: 'Montserrat-Medium', sans-serif;
 }
 
 @mixin msb {

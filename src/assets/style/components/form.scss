@@ -1,5 +1,6 @@
 @use '../config/vars.scss';
 @use '../config/typography.scss';
+@use '../config/media.scss';
 
 .cc-form {
   &__label {
@@ -13,7 +14,7 @@
     border: 0;
     border-bottom: 1px solid rgb(vars.$color-base, vars.$opacity-500);
     transition: all vars.$transition-150;
-    @include typography.mt();
+    @include typography.mr();
     &:focus {
       outline: 0;
       border-bottom: 1px solid vars.$color-base;

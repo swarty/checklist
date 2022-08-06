@@ -1,3 +1,5 @@
+@use '@/assets/style/config/media.scss';
+
 .cc-project-form {
   &__form-row {
     margin-bottom: 15px;
@@ -8,6 +10,9 @@
   &__form-label {
     max-width: 300px;
     width: 100%;
+    @include media.print() {
+      max-width: 400px;
+    }
   }
   &__form-input {
     width: 100%;

@@ -1,15 +1,24 @@
 @use '@/assets/style/config/vars.scss';
+@use '@/assets/style/config/media.scss';
 
 .cc-task-container {
   background-color: vars.$light-white;
-  padding: 40px 50px;
-  margin-bottom: 100px;
+  padding: 0 50px 80px;
   position: relative;
+  @include media.media(phone, tablet) {
+    padding: 0 20px 40px;
+  }
   &__filter {
     padding-top: 40px;
     border-top: 1px solid vars.$color-base;
+    @include media.media(phone, tablet) {
+      padding-top: 30px;
+    }
   }
   &__list {
     padding-top: 40px;
+    @include media.print() {
+      padding-top: 20px;
+    }
   }
 }

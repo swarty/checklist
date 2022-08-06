@@ -1,13 +1,142 @@
 @use '@/assets/style/config/typography.scss';
+@use '@/assets/style/config/vars.scss';
+@use '@/assets/style/config/media.scss';
 
 .cc-task {
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  padding: 15px 0;
+  transition: background-color vars.$transition-150;
+  &:hover {
+    background-color: rgba(vars.$color-base, vars.$opacity-100);
   }
-  &__header-title-prefix {
+  @include media.print() {
+    padding: 8px 0;
+  }
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include media.print() {
+      margin: 0;
+    }
+  }
+  &__priority {
+    margin-top: 3px;
+    margin-right: 15px;
+    flex-shrink: 0;
+    @include media.print() {
+      display: none;
+    }
+  }
+  &__title {
+    cursor: pointer;
+    margin-right: 20px;
+    @include typography.mm();
+    @include media.print() {
+      margin: 0;
+    }
+  }
+  &__title_completed {
+    text-decoration: line-through;
+    opacity: vars.$opacity-500;
+    .cc-task__title-checkbox::before {
+      opacity: 1;
+    }
+  }
+  &__title-checkbox {
+    width: 1em;
+    height: 1em;
+    border: 2px solid vars.$color-accent;
+    float: left;
+    margin-right: 10px;
+    margin-top: 3px;
+    position: relative;
+    &::after {
+      content: "";
+      clear: both;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 5px;
+      height: 10px;
+      border-bottom: 2px solid vars.$color-accent;
+      border-right: 2px solid vars.$color-accent;
+      transform: rotate(45deg) translate(2px, -3px);
+      opacity: 0;
+    }
+  }
+  &__title-prefix {
     margin-right: 5px;
     @include typography.msb();
+  }
+  &__toggler {
+    margin-left: auto;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px;
+    &[disabled] {
+      cursor: not-allowed;
+      opacity: vars.$opacity-300;
+    }
+    @include media.print() {
+      display: none;
+    }
+  }
+  &__toggler-image {
+    width: 25px;
+    height: 25px;
+  }
+  &__tag-list,
+  &__addition-data {
+    padding-left: 30px;
+  }
+  &__tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px -10px 0;
+    @include media.print() {
+      display: none;
+    }
+  }
+  &__tag-list-item {
+    display: block;
+    margin: 0 10px 10px 0;
+  }
+  &__addition-data {
+    padding-top: 10px;
+    @include media.print() {
+      display: none;
+    }
+  }
+  &__addition-data-title {
+    margin-bottom: 10px;
+    @include typography.msb();
+  }
+  &__addition-data-list {
+    list-style: circle;
+    margin-left: 40px;
+  }
+  &__addition-data-list-item {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__addition-data-list-item-logo {
+    align-self: flex-start;
+    width: 1em;
+    height: 1em;
+    margin-right: 5px;
   }
 }

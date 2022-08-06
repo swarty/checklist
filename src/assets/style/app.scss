@@ -3,7 +3,7 @@
 
 // libs
 @import 'reset-css';
-@import './config/medias';
+@import './config/media';
 // @import './config/structure';
 
 * {
@@ -13,8 +13,18 @@
   height: auto;
 }
 
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
 body {
-  @include typography.mt();
+  @include typography.mm();
   color: vars.$color-base;
   background-color: vars.$color-base;
 }

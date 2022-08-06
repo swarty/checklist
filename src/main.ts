@@ -3,7 +3,7 @@ import { createPinia } from 'pinia';
 import App from './App.vue';
 
 // some translation hack
-import en from './translation/en';
+import en from '@/translation/en';
 
 const store = createPinia();
 const app = createApp(App);

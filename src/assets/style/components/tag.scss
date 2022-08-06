@@ -1,0 +1,31 @@
+@use '@/assets/style/config/typography.scss';
+@use '@/assets/style/config/vars.scss';
+@use '@/assets/style/config/media.scss';
+
+.cc-tag {
+  border: 1px solid rgba(vars.$color-base, vars.$opacity-300);
+  padding: 4px;
+  transition: border-color vars.$transition-150;
+  @include media.media() {
+    padding: 3px;
+  }
+  &:hover {
+    border-color: rgba(vars.$color-base, vars.$opacity-500);
+  }
+  @include typography.mm();
+  &_small {
+    font-size: 14px;
+  }
+  &_medium {
+    font-size: 16px;
+    @include media.media() {
+      font-size: 14px;
+    }
+  }
+  &_white {
+    border-color: vars.$color-pure;
+    &:hover {
+      border-color: rgba(vars.$color-pure, vars.$opacity-700);
+    }
+  }
+}

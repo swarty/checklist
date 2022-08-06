@@ -9,9 +9,9 @@
 </template>
 
 <script lang="ts">
-import useMainStore from '@/store/store';
 import CcTaskFilter from '@/components/task/task-filter/task-filter.vue';
 import CcTaskList from '@/components/task/task-list/task-list.vue';
+import useMainStore from '@/store/store';
 
 export default {
   name: 'cc-task-container',

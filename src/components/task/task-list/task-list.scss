@@ -1,21 +1,13 @@
+@use '@/assets/style/config/vars.scss';
+@use '@/assets/style/config/media.scss';
+
 .cc-task-list {
   &__section {
-    margin-bottom: 40px;
-    &:last-child {
-      margin-bottom: 0;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(vars.$color-base, vars.$opacity-500);
+    @include media.print() {
+      border: 0;
     }
-  }
-  &__section-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 20px;
-  }
-  &__section-header-title {
-    margin-right: 10px;
-  }
-  &__section-list-item {
-    margin-bottom: 15px;
     &:last-child {
       margin-bottom: 0;
     }

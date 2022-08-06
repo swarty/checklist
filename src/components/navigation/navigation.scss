@@ -1,0 +1,29 @@
+@use '@/assets/style/config/vars.scss';
+
+.cc-navigation {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  opacity: 0;
+  transition: opacity vars.$transition-150;
+  &_visible {
+    opacity: 1;
+  }
+  &__container {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    cursor: pointer;
+    color: vars.$color-pure;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    text-decoration: none;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

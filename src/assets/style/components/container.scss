@@ -1,6 +1,13 @@
+@use '@/assets/style/config/media.scss';
+
 .cc-container {
   max-width: 940px;
   width: 100%;
   padding: 0 30px;
   margin: 0 auto;
+  position: relative;
+  @include media.print() {
+    max-width: 100%;
+    padding: 0;
+  }
 }

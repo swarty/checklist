@@ -4,7 +4,7 @@ interface ITaskAdditionData {
 }
 
 interface ITaskTitle {
-  prefix: string
+  prefix?: string
   description: string
 }
 
@@ -13,7 +13,7 @@ export interface ITaskPayload {
   priority: number
   title: ITaskTitle
   tags: string[]
-  additionData: ITaskAdditionData
+  additionData?: ITaskAdditionData[]
 }
 
 export interface ITask extends ITaskPayload {

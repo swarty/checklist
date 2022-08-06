@@ -1,27 +1,49 @@
 @use '../config/vars.scss';
 @use '../config/typography.scss';
+@use '../config/media.scss';
 
 .cc-title-1 {
   font-size: 32px;
+  line-height: 1.33;
   @include typography.msb();
+  @include media.media(phone, tablet) {
+    font-size: 24px;
+  }
 }
 
 .cc-title-2 {
   font-size: 26px;
+  line-height: 1.33;
   @include typography.msb();
+  @include media.media(phone, tablet) {
+    font-size: 20px;
+  }
 }
 
 .cc-title-3 {
   font-size: 24px;
+  line-height: 1.5;
   @include typography.msb();
+  @include media.media(phone, tablet) {
+    font-size: 18px;
+  }
 }
 
-.cc-text {
+.cc-text-1 {
+  line-height: 1.5;
   font-size: 18px;
+  @include media.media(phone, tablet) {
+    font-size: 16px;
+  }
+}
+
+.cc-text-2 {
+  line-height: 1.3;
+  font-size: 16px;
 }
 
 .cc-link {
-  @extend .cc-text;
+  @extend .cc-text-1;
   text-decoration: underline;
   color: vars.$color-accent;
   &:hover {
