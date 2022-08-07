@@ -6,7 +6,7 @@ jobs:
   eslint:
     runs-on: ubuntu-latest
     container:
-      image: node:14.17.0-alpine
+      image: node:16.15.0-alpine
     steps:
       - uses: actions/checkout@v2
       - name: install dependencies
