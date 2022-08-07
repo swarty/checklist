@@ -25,8 +25,11 @@ export default defineConfig(({ _, mode }) => {
         '@' : resolve(__dirname, `./${SRC}/`),
       },
     },
+    base: isProduction
+      ? '//swarty.github.io/checklist/'
+      : '',
     build: {
-      rollupOptions: {
+      rollupOptions: { 
         output: {
           chunkFileNames: 'assets/js/[name]-[hash].js',
           entryFileNames: 'assets/js/[name]-[hash].js',

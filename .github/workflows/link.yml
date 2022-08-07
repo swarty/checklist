@@ -1,0 +1,12 @@
+name: lint
+
+jobs: 
+  eslint: 
+    container:
+      image: node:14.17.0-alpine
+     steps:
+      - uses: actions/checkout@v2
+      - name: install dependencies
+        run: npm install
+      - name: Link code with Eslint
+        run: npm run lint

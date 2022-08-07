@@ -2,6 +2,7 @@
 
 declare global {
   interface Window {
+    // eslint-disable-next-line
     scroll: any;
   }
 }

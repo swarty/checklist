@@ -25,6 +25,7 @@ enum EPriority {
 }
 /* eslint-enable */
 
+// eslint-disable-next-line
 function scraper () {
   const sectionList: NodeListOf<HTMLElement> = document.querySelectorAll('[data-section');
   const elementList: ITask[] = [];

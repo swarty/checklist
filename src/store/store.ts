@@ -27,7 +27,7 @@ export default defineStore('useMainStore', {
       this.activeTaskListTag = tag;
     },
     async getTaskList() {
-      const response = await fetch('/api/task-list.json');
+      const response = await fetch('./api/task-list.json');
       const taskList = await response.json();
       this.taskList = taskList.map((task: ITaskPayload) => ({
         ...task,
